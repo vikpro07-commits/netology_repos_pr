@@ -8,7 +8,7 @@ def test_get_request_with_params():
     response = requests.get(f"{BASE_URL}/get", params={"test_param": "123"})
     
     # Проверяем статус-код
-    assert response.status_code == 404, f"Ожидался 200, получено {response.status_code}"
+    assert response.status_code == 200, f"Ожидался 200, получено {response.status_code}"
     
     # Проверяем, что Postman Echo вернул переданный параметр
     response_data = response.json()
